@@ -29,8 +29,10 @@ class DetectRequest:
 @dataclass
 class MqttDetectRequest(DetectRequest):
     separate_detections: Optional[bool] = False
+    watching_directory: Optional[str] = ""
     crop: Optional[bool] = False
     binary_images: Optional[bool] = False
+    save_local: Optional[bool] = False
 
 @dataclass
 class Detector:
